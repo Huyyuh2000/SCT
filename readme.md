@@ -10,7 +10,7 @@
     <code>.\env\Scripts\activate</code>
 -   Cài đặt các thư viện cần thiết:
     <p>
-    <code>py -m pip install requests</code>
+    <code>pip install numpy</code>
 -   Chạy GUI:
     <p>
     <code>python GUI.py</code>
