@@ -25,6 +25,13 @@ def button_summit(ZL, Z0, Zs, Vs, L, z, alpha, f):
     announce.config(text='')
     if errorCheck(ZL, Z0, Zs, Vs, L, z, alpha, f) is True:
         V, I, Pinc, Pref, Ptrans = cal_fuction(complex(ZL), int(Z0), complex(Zs), complex(Vs), float(L), float(z), float(alpha), float(f))
+        
+        e_V.delete(0, END)
+        e_I.delete(0, END)
+        e_Pinc.delete(0, END)
+        e_Pref.delete(0, END)
+        e_Ptran.delete(0, END)
+        
         e_V.insert(0, V)
         e_I.insert(0, I)
         e_Pinc.insert(0, Pinc)
