@@ -10,12 +10,12 @@ def errorCheck(ZL, Z0, Zs, Vs, L, z, alpha, f):
        float(L)
        float(z)
        float(alpha)
-       float(f)
+       float(eval(f))
     except ValueError:
         announce.config(text='ZL, Z0, Zs, Vs phải có kiểu: a+bj với a,b là số thực, L là số thực lớn hơn 0')
         return False
     else:
-        if float(L)>0 and int(Z0)>0 and float(z)>0 and float(z)<=float(L) and float(alpha) >=0 and float(f)>0:
+        if float(L)>0 and int(Z0)>0 and float(z)>0 and float(z)<=float(L) and float(alpha) >=0 and float(eval(f))>0:
             return True
         elif float(L)<0 or int(Z0)<0 or float(z)<0 or float(z)>float(L) or float(alpha)>0:
             announce.config(text='0<z<L và Z0>0 và L>0 và alpha>0 và f là số nguyên')
@@ -24,7 +24,7 @@ def errorCheck(ZL, Z0, Zs, Vs, L, z, alpha, f):
 def button_summit(ZL, Z0, Zs, Vs, L, z, alpha, f):
     announce.config(text='')
     if errorCheck(ZL, Z0, Zs, Vs, L, z, alpha, f) is True:
-        V, I, Pinc, Pref, Ptrans = cal_fuction(complex(ZL), int(Z0), complex(Zs), complex(Vs), float(L), float(z), float(alpha), float(f))
+        V, I, Pinc, Pref, Ptrans = cal_fuction(complex(ZL), int(Z0), complex(Zs), complex(Vs), float(L), float(z), float(alpha), float(eval(f)))
         
         e_V.delete(0, END)
         e_I.delete(0, END)
