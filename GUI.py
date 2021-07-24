@@ -49,7 +49,7 @@ root.title('Btl1 Nhóm xxx')
 
 label_1 = Label(root, text='Nhập các thông số')
 
-label_z = Label(root, text='z:')
+label_z = Label(root, text='z (theo lambda; z>=0):')
 e_z = Entry(root, width=20)
 
 label_ZL = Label(root, text='ZL:')
@@ -67,7 +67,7 @@ e_Vs = Entry(root, width=20)
 label_L = Label(root, text='L (theo lamdba):')
 e_L = Entry(root, width=20)
 
-label_alpha = Label(root, text='alpha:')
+label_alpha = Label(root, text='alpha (alpha>=0):')
 e_alpha = Entry(root, width=20)
 
 label_f = Label(root, text='f:')
